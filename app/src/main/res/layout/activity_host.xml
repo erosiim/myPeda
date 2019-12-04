@@ -46,7 +46,7 @@
               android:layout_gravity="center_horizontal">
 
          <EditText
-             android:id="@+id/txtNombre"
+             android:id="@+id/txtNombreHost"
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_marginStart="20dp"
@@ -61,7 +61,7 @@
              android:textColorHint="#FFFFFF" />
 
              <EditText
-                 android:id="@+id/txtApellidos"
+                 android:id="@+id/txtApellidosHost"
                  android:layout_width="match_parent"
                  android:layout_height="wrap_content"
                  android:layout_marginTop="20dp"
@@ -157,7 +157,7 @@
             android:textColorHint="#FFFFFF" />
 
         <Button
-            android:id="@+id/btnIngresarHost"
+            android:id="@+id/btnRegistrarHost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

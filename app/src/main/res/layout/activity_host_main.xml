@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/login_background"
-    tools:context=".hostActivity">
+    tools:context=".HostMain">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -20,18 +21,19 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="40dp">
 
                 <ImageView
                     android:layout_height="100dp"
                     android:layout_width="100dp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="50dp"
                     android:src="@mipmap/hi_192x192"
                     android:layout_gravity="center_horizontal"
                     android:tooltipText="I love u"
                     />
                 <TextView
-                    android:text="Invitados!"
+                    android:text="Hosts!"
                     android:layout_gravity="center_vertical"
                     android:textSize="36sp"
                     android:fontFamily="serif"
@@ -39,45 +41,10 @@
                     />
             </TableRow>
 
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center_horizontal">
-
-                <EditText
-                    android:id="@+id/txtNombreHost"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@drawable/login_edit_background"
-                    android:drawableStart="@mipmap/usuario_png_25x25"
-                    android:drawableLeft="@mipmap/usuario_png_25x25"
-                    android:hint=" Nombre"
-                    android:padding="10dp"
-                    android:textColor="@color/colorText"
-                    android:textColorHint="#FFFFFF" />
-
-                <EditText
-                    android:id="@+id/txtApellidosHost"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:background="@drawable/login_edit_background"
-                    android:drawableStart="@mipmap/usuario_png_25x25"
-                    android:drawableLeft="@mipmap/usuario_png_25x25"
-                    android:hint=" Apellidos"
-                    android:padding="10dp"
-                    android:textColor="@color/colorText"
-                    android:textColorHint="#FFFFFF" />
-            </TableRow>
-
         </TableLayout>
 
         <EditText
-            android:id="@+id/txtNombreUsuario"
+            android:id="@+id/txtHorarioDrink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -87,28 +54,12 @@
             android:drawableStart="@mipmap/usuario_png_25x25"
             android:drawableLeft="@mipmap/usuario_png_25x25"
             android:drawablePadding="10dp"
-            android:hint="Nombre de usuario"
+            android:hint="Horario"
             android:padding="10dp"
             android:textColor="@color/colorText"
             android:textColorHint="#FFFFFF" />
         <EditText
-            android:id="@+id/txtPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/login_edit_background"
-            android:drawableStart="@mipmap/candado_cerrado_25x25"
-            android:drawableLeft="@mipmap/candado_cerrado_25x25"
-            android:drawablePadding="10dp"
-            android:hint="Contraseña"
-            android:padding="10dp"
-            android:inputType="textPassword"
-            android:textColor="@color/colorText"
-            android:textColorHint="#FFFFFF" />
-        <EditText
-            android:id="@+id/txtEdad"
+            android:id="@+id/txtCantidadDrink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -118,30 +69,31 @@
             android:drawableStart="@mipmap/usuario_png_25x25"
             android:drawableLeft="@mipmap/usuario_png_25x25"
             android:drawablePadding="10dp"
-            android:hint="Edad"
+            android:hint="Cantidad de personas"
+            android:padding="10dp"
+            android:inputType="number"
+            android:textColor="@color/colorText"
+            android:textColorHint="#FFFFFF" />
+        <EditText
+            android:id="@+id/txtPresupuetoDrink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/login_edit_background"
+            android:drawableStart="@mipmap/usuario_png_25x25"
+            android:drawableLeft="@mipmap/usuario_png_25x25"
+            android:drawablePadding="10dp"
+            android:hint="Presupuesto"
             android:inputType="number"
             android:padding="10dp"
             android:textColor="@color/colorText"
             android:textColorHint="#FFFFFF" />
 
-        <EditText
-            android:id="@+id/txtTelefono"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/login_edit_background"
-            android:drawableStart="@mipmap/usuario_png_25x25"
-            android:drawableLeft="@mipmap/usuario_png_25x25"
-            android:drawablePadding="10dp"
-            android:hint="Teléfono"
-            android:inputType="phone"
-            android:padding="10dp"
-            android:textColor="@color/colorText"
-            android:textColorHint="#FFFFFF" />
+
         <Button
-            android:id="@+id/btnRegistroInvitados"
+            android:id="@+id/btnRegistrarHost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -150,10 +102,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginRight="25dp"
             android:background="@drawable/button_background"
-            android:text="Registrarse"
+            android:text="Crear Drink!"
             android:textAllCaps="false"
             android:textColor="#000"
             android:textSize="21sp" />
     </LinearLayout>
+
 
 </RelativeLayout>

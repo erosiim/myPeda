@@ -10,8 +10,11 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".invitedActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".InvitadoMain"></activity>
+        <activity android:name=".HostMain" />
+        <activity android:name=".invitedActivity" />
         <activity android:name=".hostActivity" />
         <activity
             android:name=".MainActivity"
