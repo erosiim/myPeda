@@ -10,7 +10,7 @@ object RetrofitClient {
 
     private val AUTH = "Basic "+ Base64.encodeToString("alonso:123456".toByteArray(), Base64.NO_WRAP)
 
-    private const val BASE_URL = "https://mipeda.appspot.com/hosts"
+    private const val BASE_URL = "https://mipeda.appspot.com"
 
     private val okHttpClient = OkHttpClient.Builder()
         .addInterceptor { chain ->
