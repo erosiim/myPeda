@@ -32,7 +32,7 @@
                     android:tooltipText="I love u"
                     />
                 <TextView
-                    android:text="Invitado!"
+                    android:text="Pedas!"
                     android:layout_gravity="center_vertical"
                     android:textSize="36sp"
                     android:fontFamily="serif"
@@ -44,7 +44,7 @@
         </TableLayout>
 
         <EditText
-            android:id="@+id/txtNombreUsuario"
+            android:id="@+id/txtNombreUsuarioInvitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -59,7 +59,7 @@
             android:textColor="@color/colorText"
             android:textColorHint="#FFFFFF" />
         <EditText
-            android:id="@+id/txtPassword"
+            android:id="@+id/txtPasswordInvitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -75,7 +75,7 @@
             android:textColor="@color/colorText"
             android:textColorHint="#FFFFFF" />
         <EditText
-            android:id="@+id/txtEdad"
+            android:id="@+id/txtEdadInvitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -92,7 +92,7 @@
             android:textColorHint="#FFFFFF" />
 
         <EditText
-            android:id="@+id/txtTelefono"
+            android:id="@+id/txtTelefonoInvitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -108,7 +108,7 @@
             android:textColor="@color/colorText"
             android:textColorHint="#FFFFFF" />
         <EditText
-            android:id="@+id/txtDireccion"
+            android:id="@+id/txtDireccionInvitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -123,8 +123,8 @@
             android:textColor="@color/colorText"
             android:textColorHint="#FFFFFF" />
 
-        <Button
-            android:id="@+id/btnRegistrarHost"
+      <!--  <Button
+            android:id="@+id/btnRegistrarInvitado"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -137,6 +137,7 @@
             android:textAllCaps="false"
             android:textColor="#000"
             android:textSize="21sp" />
+            -->
     </LinearLayout>
 
 </RelativeLayout>

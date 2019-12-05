@@ -44,8 +44,6 @@ class hostActivity : AppCompatActivity() {
             Toast.makeText(this,"Bienvenido ${txtNombreUsuarioHost.text.toString()}", Toast.LENGTH_LONG).show()
             val intent = Intent (this, HostMain::class.java)
             startActivity(intent)
-
-
         }
 
     }

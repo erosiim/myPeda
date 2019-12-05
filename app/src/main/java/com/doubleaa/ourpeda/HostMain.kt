@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.doubleaa.ourpeda.APIInterfaceRequest.IHostApiService
 import com.doubleaa.ourpeda.HttpBodyPojos.PedaBody
+import kotlinx.android.synthetic.main.activity_host.*
 import kotlinx.android.synthetic.main.activity_host_main.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -31,6 +32,8 @@ class HostMain : AppCompatActivity() {
 
     btnCrearDrink.setOnClickListener {
         insertOne()
+
+        Toast.makeText(this,"Peda guardada", Toast.LENGTH_LONG).show()
     }
 
 
@@ -49,6 +52,7 @@ class HostMain : AppCompatActivity() {
             object : Callback<String> {
                 override fun onFailure(call: Call<String>, t: Throwable) {
                     var t = Toast.makeText(this@HostMain, "ERROR ADDING", Toast.LENGTH_LONG)
+
 
                 }
 

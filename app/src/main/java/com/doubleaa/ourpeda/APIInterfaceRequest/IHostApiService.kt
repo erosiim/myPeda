@@ -1,8 +1,10 @@
 package com.doubleaa.ourpeda.APIInterfaceRequest
 
 import com.doubleaa.ourpeda.HttpBodyPojos.HostBodyPojo
+import com.doubleaa.ourpeda.HttpBodyPojos.InvitadoBodyPojo
 import com.doubleaa.ourpeda.HttpBodyPojos.PedaBody
 import com.doubleaa.ourpeda.HttpResponsePojos.HostResponse
+import com.doubleaa.ourpeda.HttpResponsePojos.InvitadoResponse
 import com.doubleaa.ourpeda.HttpResponsePojos.PedaResponse
 import retrofit2.Call
 import retrofit2.http.*
@@ -41,7 +43,24 @@ interface IHostApiService {
     @DELETE("pedas/{id}")
     fun deletePeda(@Path("id") id : String): Call<String>
 
-    /*--------------------------*/
+/*---------------INVITADOS--------------------------------*/
+    @GET("usuarios")
+    fun getInvitados(): Call< ArrayList<InvitadoResponse> >
+
+    @POST("usuarios")
+    fun createInvitado(@Body body: InvitadoBodyPojo): Call<String>
+
+    @GET("usuarios/{id}")
+    fun getInvitadoById(@Path("id") id : String): Call<InvitadoResponse>
+
+    @PUT("usuarios/{id}")
+    fun updateInvitado(@Path("id") id : String, @Body body:InvitadoBodyPojo): Call<String>
+
+    @DELETE("usuarios/{id}")
+    fun deleteInvitado(@Path("id") id : String): Call<String>
+
+
+
 
 
 

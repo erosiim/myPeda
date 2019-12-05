@@ -5,5 +5,5 @@ class PedaBody {
     var horario: String = ""
     var cantidad: String = ""
     var presupuesto: String = ""
-
+    var host:Int=0
 }
