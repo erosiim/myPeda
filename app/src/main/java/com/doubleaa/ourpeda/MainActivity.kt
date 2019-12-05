@@ -29,10 +29,19 @@ import java.io.InputStreamReader
 import java.net.HttpURLConnection
 import java.net.MalformedURLException
 import java.net.URL
+import java.sql.DriverManager
 
 
 class MainActivity : AppCompatActivity() {
 
+    val retrofit = Retrofit.Builder().addCallAdapterFactory(
+        RxJava2CallAdapterFactory.create())
+        .addConverterFactory(
+            GsonConverterFactory.create())
+        .baseUrl("https://mipeda.appspot.com/")
+        .build();
+
+    var retrofitobj = retrofit.create(IHostApiService::class.java)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Thread.sleep(2000)
@@ -41,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val retrofit = Retrofit.Builder().addCallAdapterFactory(
+      /*  val retrofit = Retrofit.Builder().addCallAdapterFactory(
                 RxJava2CallAdapterFactory.create())
             .addConverterFactory(
                 GsonConverterFactory.create())
@@ -160,7 +169,12 @@ class MainActivity : AppCompatActivity() {
             }
         )
         // TERMINA DELETE
+*/
 
+
+        btnIngresarMain.setOnClickListener {
+            login()
+        }
 
         /*
         * Pasamos a nueva actividad a través del botón host (llamamos directo al botón host)
@@ -185,7 +199,31 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
     }
+
+    fun login(){
+        //INICIA GET ONE
+        retrofitobj.getHostById("4").enqueue(
+            object : Callback<HostResponse> {
+                override fun onFailure(call: Call<HostResponse>, t: Throwable) {
+                    TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+                }
+
+                override fun onResponse(
+                    call: Call<HostResponse>,
+                    response: Response<HostResponse>
+                ) {
+                    Log.d("I FOUND "+ response.body()?.nombre, "I FOUND "+ response.body()?.nombre)
+                    var t = Toast.makeText(this@MainActivity, "Goood", Toast.LENGTH_LONG)
+                    t.show()
+                }
+
+            }
+        )
+        //TERMINA GET ONE
+    }
+
 
 
 
