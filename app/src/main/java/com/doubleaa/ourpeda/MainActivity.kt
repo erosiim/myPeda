@@ -39,9 +39,15 @@ class MainActivity : AppCompatActivity() {
         .addConverterFactory(
             GsonConverterFactory.create())
         .baseUrl("https://mipeda.appspot.com/")
-        .build();
+        .build()
+
+
+
 
     var retrofitobj = retrofit.create(IHostApiService::class.java)
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Thread.sleep(2000)
@@ -49,6 +55,13 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        btnIngresarMain.setOnClickListener {
+            val intent = Intent (this, hostActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Bienvenido ${txtUsuario.text.toString()}" , Toast.LENGTH_LONG).show()
+        }
+
 
       /*  val retrofit = Retrofit.Builder().addCallAdapterFactory(
                 RxJava2CallAdapterFactory.create())
@@ -171,10 +184,6 @@ class MainActivity : AppCompatActivity() {
         // TERMINA DELETE
 */
 
-
-        btnIngresarMain.setOnClickListener {
-            login()
-        }
 
         /*
         * Pasamos a nueva actividad a través del botón host (llamamos directo al botón host)

@@ -33,7 +33,7 @@ class HostMain : AppCompatActivity() {
     btnCrearDrink.setOnClickListener {
         insertOne()
 
-        Toast.makeText(this,"Peda guardada", Toast.LENGTH_LONG).show()
+        Toast.makeText(this,"Drink guardado!", Toast.LENGTH_LONG).show()
     }
 
 
@@ -52,8 +52,6 @@ class HostMain : AppCompatActivity() {
             object : Callback<String> {
                 override fun onFailure(call: Call<String>, t: Throwable) {
                     var t = Toast.makeText(this@HostMain, "ERROR ADDING", Toast.LENGTH_LONG)
-
-
                 }
 
                 override fun onResponse(call: Call<String>, response: Response<String>) {

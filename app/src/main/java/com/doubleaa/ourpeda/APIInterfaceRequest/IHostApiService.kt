@@ -11,62 +11,52 @@ import retrofit2.http.*
 
 interface IHostApiService {
 
-    @GET("hosts")
+    @GET("api/hosts")
     fun getHosts(): Call< ArrayList<HostResponse> >
 
-    @POST("hosts")
+    @POST("api/hosts")
     fun createHost(@Body body: HostBodyPojo): Call<String>
 
-    @GET("hosts/{id}")
+    @GET("api/hosts/{id}")
     fun getHostById(@Path("id") id : String): Call<HostResponse>
 
-    @PUT("hosts/{id}")
+    @PUT("api/hosts/{id}")
     fun updateHost(@Path("id") id : String, @Body body:HostBodyPojo): Call<String>
 
-    @DELETE("hosts/{id}")
+    @DELETE("api/hosts/{id}")
     fun deleteHost(@Path("id") id : String): Call<String>
 
 /*----------------------------Pedas-----------------------*/
 
-    @GET("pedas")
+    @GET("api/pedas")
     fun getPedas(): Call< ArrayList<PedaResponse> >
 
-    @POST("pedas")
+    @POST("api/pedas")
     fun createPeda(@Body body: PedaBody): Call<String>
 
-    @GET("pedas/{id}")
+    @GET("api/pedas/{id}")
     fun getPedaById(@Path("id") id : String): Call<PedaResponse>
 
-    @PUT("pedas/{id}")
+    @PUT("api/pedas/{id}")
     fun updatePeda(@Path("id") id : String, @Body body:PedaBody): Call<String>
 
-    @DELETE("pedas/{id}")
+    @DELETE("api/pedas/{id}")
     fun deletePeda(@Path("id") id : String): Call<String>
 
 /*---------------INVITADOS--------------------------------*/
-    @GET("usuarios")
+    @GET("api/usuarios")
     fun getInvitados(): Call< ArrayList<InvitadoResponse> >
 
-    @POST("usuarios")
+    @POST("api/usuarios")
     fun createInvitado(@Body body: InvitadoBodyPojo): Call<String>
 
-    @GET("usuarios/{id}")
+    @GET("api/usuarios/{id}")
     fun getInvitadoById(@Path("id") id : String): Call<InvitadoResponse>
 
-    @PUT("usuarios/{id}")
+    @PUT("api/usuarios/{id}")
     fun updateInvitado(@Path("id") id : String, @Body body:InvitadoBodyPojo): Call<String>
 
-    @DELETE("usuarios/{id}")
+    @DELETE("api/usuarios/{id}")
     fun deleteInvitado(@Path("id") id : String): Call<String>
-
-
-
-
-
-
-
-
-
-
 
 }
